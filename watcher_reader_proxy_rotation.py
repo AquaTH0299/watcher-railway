@@ -35,5 +35,11 @@ def test_and_connect():
             time.sleep(1)
     print("❌ Không proxy nào hoạt động được. Vui lòng thử lại sau hoặc đổi mạng/VPN.")
 
+import time
+
 if __name__ == '__main__':
-    test_and_connect()
+    while True:
+        fetch_latest_messages(limit=1)
+        print("⏳ Đợi 5 phút trước lần lấy tiếp theo...\n")
+        time.sleep(300)  # 5 phút
+
